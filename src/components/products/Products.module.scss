@@ -3,7 +3,6 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 180px 1fr;
-    /* updated aside width to 180px */
     gap: 1rem;
 
     @media (max-width: 768px) {
@@ -79,11 +78,8 @@
 
         &>* {
             border: 1px solid #ddd;
-            /* updated border color */
             border-radius: 10px;
-            /* added border radius */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            /* added box shadow */
             transition: transform 0.3s, box-shadow 0.3s;
 
             &:hover {
@@ -93,7 +89,6 @@
         }
     }
 
-    /* Add some animations to the grid items */
     .grid>* {
         animation: fadeIn 0.5s forwards;
 
@@ -110,7 +105,6 @@
         }
     }
 
-    /* Add some hover effects to the grid items */
     .grid>*:hover {
         animation: hoverEffect 0.5s forwards;
 
