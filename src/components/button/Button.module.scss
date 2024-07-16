@@ -1,4 +1,4 @@
-button {
+.buttons {
   background-color: greenyellow;
   border: none;
   padding: 1rem;
@@ -8,7 +8,7 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
+.buttons:hover {
   background-color: #ffff00;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
