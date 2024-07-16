@@ -109,7 +109,7 @@ const Products = ({ cart, setCart, setAdd }) => {
       </aside>
       <main>
         {loading ? (
-          <p>Loading...</p>
+          <p className={styles.spinner}></p>
         ) : products.length ? (
           <div className={styles.grid}>
             {products.map((product) => (

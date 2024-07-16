@@ -1,11 +1,11 @@
 .container {
-    max-width: 1200px;
+    max-width: 1270px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 180px 1fr;
     gap: 1rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 450px) {
         grid-template-columns: 1fr;
     }
 
@@ -16,6 +16,7 @@
 
     aside {
         background-color: rgb(238, 238, 238);
+        animation: fadeOut 1s forwards;
     }
 
     ul {
@@ -90,12 +91,12 @@
     }
 
     .grid>* {
-        animation: fadeIn 0.5s forwards;
+        animation: fadeIn 1s forwards;
 
         @keyframes fadeIn {
             0% {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(500px);
             }
 
             100% {
@@ -104,18 +105,35 @@
             }
         }
     }
+}
 
-    .grid>*:hover {
-        animation: hoverEffect 0.5s forwards;
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
 
-        @keyframes hoverEffect {
-            0% {
-                transform: translateY(0);
-            }
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
 
-            100% {
-                transform: translateY(-10px);
-            }
-        }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
